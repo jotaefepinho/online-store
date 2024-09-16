@@ -47,7 +47,9 @@ The project will include:
 
 
 ### Navigation Flow:
-![Navigation Diagram](diagram.png "Diagram")
+
+![Navigation Diagram](./diagram.png)
+
 - Some sections are available in the Navigation Bar, but most are hidden behind the product or cart sections
 
 ---
