@@ -6,6 +6,8 @@
     --white: #ececec;
     --gray: #b0b0b4;
     --blue: #018dff;
+    --dark-blue: #007bff;
+    --blue-highlight: #006dee;
     --purple: #4f429b;
 }
 
@@ -34,7 +36,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #007BFF;
+    background-color: var(--dark-blue);
     padding: 10px 50px;
 }
 
@@ -97,7 +99,7 @@ nav ul li a:hover {
 }
 
 .hero-text button {
-    background-color: #ff4747;
+    background-color: var(--tan-color);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -106,12 +108,12 @@ nav ul li a:hover {
 }
 
 .hero-text button:hover {
-    background-color: #cb3131;
+    background-color: var(--accent-color);
 }
 
 /*===================================================# Home #========================================================*/
 #home {
-    background-color: #f8f9fa;
+    background-color: var(--white);
     padding: 60px 20px;
     text-align: center;
     border-radius: 10px;
@@ -137,7 +139,7 @@ nav ul li a:hover {
 
 /*================================================# Newsletter #=====================================================*/
 .newsletter {
-    background-color: #007BFF;
+    background-color: var(--dark-blue);
     color: white;
     padding: 20px;
     text-align: center;
@@ -161,7 +163,7 @@ nav ul li a:hover {
 
 .newsletter button {
     padding: 10px 20px;
-    background-color: #ff4747;
+    background-color: var(--purple);
     border: none;
     color: white;
     border-radius: 5px;
@@ -169,7 +171,7 @@ nav ul li a:hover {
 }
 
 .newsletter button:hover {
-    background-color: #cb3131;
+    background-color: var(--gray);
 }
 
 
@@ -227,7 +229,6 @@ footer {
 
 /*===============================================# Product Grid #====================================================*/
 .products {
-    background-color: rgb(185, 185, 185);
     padding: 20px 20px;
     border-radius: 10px;
 }
@@ -241,25 +242,25 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
 }
 
-.product-item {
-    background-color: var(--white);
+.product-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border: 1px solid var(--gray);
-    padding: 15px;
-    text-align: center;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+    background-color: var(--white);
+    padding: 20px;
 }
-
 .product-item:hover {
     transform: scale(1.05);
 }
 
 .product-item img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
 }
 
 
@@ -270,6 +271,36 @@ footer {
 
 .product-item p {
     color: var(--accent-color);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.product-info button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.product-info button:hover {
+    background-color: var(--blue-highlight);
 }
 
 form{
@@ -287,6 +318,36 @@ label{
 input{
     display: table-cell;
     margin: 5px;
+}
+
+/*===================================================================================================================*/
+/*------------------------------------------------# Pagination #-----------------------------------------------------*/
+/*===================================================================================================================*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.pagination a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    background-color: #f4f4f4;
+}
+
+.pagination a:hover {
+    background-color: var(--tan-color);
+    color: black;
+}
+
+.pagination a.active {
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--gray);
 }
 
 /*===================================================================================================================*/
