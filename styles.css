@@ -1,14 +1,14 @@
 :root {
-    --main-color: #59c3c3;
-    --accent-color: #52489c;
-    --tan-color: #f7e5c2;
-    --dark-brown: #6e633d;
-    --white: #ececec;
-    --gray: #b0b0b4;
-    --blue: #018dff;
-    --dark-blue: #007bff;
-    --blue-highlight: #006dee;
-    --purple: #4f429b;
+    --main-color: #D33F49;  /* Vermelho queimado */
+    --accent-color: #FDFD96;  /* Amarelo mostarda */
+    --orange: #FFB30F;  /* Laranja retro */
+    --dark-brown: #3B3A30;  /* Marrom quase preto, lembrando discos de vinil */
+    --white: #ECEBE9;  /* Branco envelhecido */
+    --gray: #5B5A59;  /* Cinza para toques neutros */
+    --blue: #1B4079;  /* Azul petróleo */
+    --dark-blue: #2C2B2E;  /* Preto profundo, remetendo ao vinil */
+    --blue-highlight: #1E555C;  /* Azul esverdeado */
+    --purple: #4E4D4A;  /* Cinza amarronzado para detalhes */
 }
 
 /*===================================================================================================================*/
@@ -36,62 +36,70 @@ body {
 header{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--white);
+    background-color: var(--dark-blue); /* Preto de vinil */
 }
 .header-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background-color: var(--dark-blue);
+    padding: 10px;
 }
 .header-title{
-    
-    padding-left: 3%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    padding-left: 3%;
 }
-
+.header-title a{
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+.store-logo{
+    width: 40px; /* Tamanho do ícone */
+    height: 40px; /* Altura do ícone */
+    margin-right: 10px; /* Espaço entre o logo e o nome da loja */
+}
 .login-navbar {
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
-
 }
 .login-navbar a{
     text-decoration: none;
-    color: var(--white);
-
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    size: 1em;
+    color: var(--accent-color); /* Amarelo vibrante para destacar */
     font-weight: bold;
 }
 
-nav{
+nav {
     width: 100%;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 10px;
     list-style: none;
-
     padding: 10px;
     padding-left: 3%;
     margin: 0px;
-    background-color: var(--main-color);
+    background-color: var(--main-color); /* Vermelho retro */
     width: 100%;
 }
-nav ul li a{
+
+nav ul li a {
     color: var(--white);
     text-decoration: none;
-
     font-family: Helvetica, sans-serif;
     font-weight: bold;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: var(--accent-color); /* Destaque com amarelo mostarda */
 }
+
 
 /*==================================================# Banner #=======================================================*/
 .hero{
@@ -99,36 +107,28 @@ nav ul li a:hover {
     padding-top: 0px;
     padding-bottom: 0px;
     text-align: center;
-
-    background-color: var(--gray)
+    background-color: var(--gray); /* Neutro */
 }
-
-.hero img {
-    display: block;
-    width: 100%;
+.hero img{
+    width: 800px;
     height: auto;
 }
-
 .hero-text {
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--white);
     padding: 10px 40px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
 }
 
-.hero-text h2 {
-    font-size: 36px;
-}
-
 .hero-text button {
-    background-color: var(--tan-color);
-    color: white;
+    background-color: var(--orange); /* Laranja retrô */
+    color: var(--white);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -136,7 +136,15 @@ nav ul li a:hover {
 }
 
 .hero-text button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Amarelo retro */
+}
+
+/*==================================================# Footer #=======================================================*/
+footer {
+    background-color: var(--dark-brown); /* Fundo quase preto */
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
 }
 
 /*===================================================# Home #========================================================*/
@@ -220,41 +228,13 @@ nav ul li a:hover {
 
 /*==================================================# Footer #=======================================================*/
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--gray);
+    color: var(--white);
     text-align: center;
     padding: 10px 0;
+
+    font-family: 'Courier New', Courier, monospace;
 }
-
-/* .footer-links ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 15px;
-
-    list-style-type: none;
-} */
-
-
-
-/* .footer-links ul li a{
-    color: #2307c5;
-    text-decoration: none;
-   
-}
-
-.footer-links ul li a:hover{
-    color: #4f429b;
-    text-decoration: none;
-    font-size: 15px;
-
-}
-
-.footer-icons img{
-    height: 30px;
-    padding-right: 10px;
-} */
-
 /*===============================================# Product Grid #====================================================*/
 .products {
     padding: 20px 20px;
@@ -274,54 +254,52 @@ footer {
 }
 
 .product-item{
+    transition: transform 0.2s ease;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    width: 300px;
     border: 1px solid var(--gray);
     background-color: var(--white);
     padding: 20px;
-}
-.product-item:hover {
-    transform: scale(1.05);
-}
+    overflow: hidden;
+    line-height: 15px;
 
+    height: 150px;
+}
+.product-item:hover{
+    transition: transform 0.2s ease;
+    transform: scale(1.10);
+}
 .product-item img {
     width: 150px;
     height: auto;
     margin-right: 20px;
 }
 
-
-.product-item h3 {
-    margin-bottom: 5px;
-    color: var(--dark-brown);
-}
-
-.product-item p {
-    color: var(--accent-color);
-}
-
 .product-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
 }
 
-.product-info h3 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.product-info p {
-    font-size: 1.2em;
-    color: #555;
+.product-item h3 {
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+    /* Defina uma altura fixa para os títulos */
+    min-height: 40px; /* Ajuste conforme necessário */
+    max-height: 40px;
+    overflow: hidden; /* Esconde o texto excedente */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
 }
 
 .product-info button {
-    margin-top: 10px;
+    margin-top: auto; /* Garante que o botão fique na parte inferior */
     padding: 10px;
-    background-color: var(--blue);
+    width: 120px;
+    background-color: var(--dark-blue);
     border: none;
     color: white;
     cursor: pointer;
@@ -330,6 +308,7 @@ footer {
 .product-info button:hover {
     background-color: var(--blue-highlight);
 }
+
 
 form{
     display: table;
@@ -359,7 +338,7 @@ input{
 }
 
 .pagination a {
-    color: #333;
+    color: var(--dark-brown);
     padding: 10px 15px;
     text-decoration: none;
     border: 1px solid #ddd;
@@ -368,12 +347,12 @@ input{
 }
 
 .pagination a:hover {
-    background-color: var(--tan-color);
+    background-color: var(--orange);
     color: black;
 }
 
 .pagination a.active {
-    background-color: var(--blue);
+    background-color: var(--dark-brown);
     color: white;
     border: 1px solid var(--gray);
 }
@@ -425,7 +404,7 @@ input{
 .login form button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: var(--dark-blue);
     color: white;
     border: none;
     border-radius: 5px;
@@ -434,7 +413,7 @@ input{
 }
 
 .login form button:hover {
-    background-color: #0056b3;
+    background-color: var(--gray);
 }
 
 /*===================================================================================================================*/
