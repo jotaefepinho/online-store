@@ -288,9 +288,8 @@ footer {
 .product-item h3 {
     margin-bottom: 5px;
     color: var(--dark-blue);
-    /* Defina uma altura fixa para os títulos */
-    min-height: 40px; /* Ajuste conforme necessário */
-    max-height: 40px;
+    /* Define uma altura fixa para os títulos */
+    min-height: 40px;
     overflow: hidden; /* Esconde o texto excedente */
     text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
 }
