@@ -1,6 +1,11 @@
 # USP 33+&frac13; Store
 
-## Project Overview
+## Project Report
+---
+- Joao Francisco Caprioli Barbosa Camargo de Pinho
+- Arturo Javier Kolster Borges
+- Pedro Liduino do Nascimento
+
 This is a simple **Online Store** project built with HTML, CSS, and basic JavaScript. The website will offer a vinyl listing page, a product grid for showcasing products, a shopping cart, a log in page, and a page for finalizing orders. The site is structured specifically for easy navigation.
 
 ---
@@ -9,9 +14,13 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
 The project will include:
 - A homepage that displays a banner and product information. &check;
 - A products section with a grid layout, showcasing available vinyls. &check;
-- Responsive design for various screen sizes (desktop, tablet, mobile). &check;
 - Persistent shopping cart using local storage.
-- User registration and authentication (login/logout).
+- User registration and authentication (login/logout), with two types of users: Admins and Clients.
+- Product/services records include, at least: name, id, photo, description, price, quantity (in stock), and quantity sold.
+- Selling Products: Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system).
+- Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+- Your functionality: Create a functionality that is specific to your application.
+- Responsive design for various screen sizes (desktop, tablet, mobile). &check;
 
 **Additional requirements** we might be able to implement:
 - Product search and filter functionality.
@@ -88,3 +97,7 @@ To run this project locally:
    ```bash
    git clone [repository link]
 3. **Open Live Copy of Project on your Browser**: :D
+
+## Problems
+
+## Comments
