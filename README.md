@@ -1,17 +1,17 @@
-# My Online Store
+# USP 33+&frac13; Store
 
 ## Project Overview
-This is a simple **Online Store** project built with HTML, CSS, and basic JavaScript. The website will offer a product listing page, a product grid for showcasing products, a shopping cart, a log in page, and a page for finalizing orders. The site is structured specifically for easy navigation.
+This is a simple **Online Store** project built with HTML, CSS, and basic JavaScript. The website will offer a vinyl listing page, a product grid for showcasing products, a shopping cart, a log in page, and a page for finalizing orders. The site is structured specifically for easy navigation.
 
 ---
 
 ## Requirements
 The project will include:
-- A homepage that displays a banner and product information.
-- A products section with a grid layout, showcasing available products.
+- A homepage that displays a banner and product information. &check;
+- A products section with a grid layout, showcasing available vinyls. &check;
+- Responsive design for various screen sizes (desktop, tablet, mobile). &check;
 - Persistent shopping cart using local storage.
 - User registration and authentication (login/logout).
-- Responsive design for various screen sizes (desktop, tablet, mobile).
 
 **Additional requirements** we might be able to implement:
 - Product search and filter functionality.
@@ -23,21 +23,21 @@ The project will include:
 ### Functionalities Prototyped in the First Milestone:
 1. **Homepage**:
    - A hero banner welcomes the user and promotes special offers.
-   - "Shop Now" button directs users to the products section.
+   - "Start Playing!" button directs users to the products section.
    
 2. **Products Section**:
-   - Displays a grid of products with images, names, and prices.
-   - Designed for easy scalability with more products in the future.
+   - Displays a grid of Vinyls with covers, names and prices.
+   - Designed for easy scalability with more vinyls in the future.
 
 3. **Shopping Cart**
-   - Displays selected items in a Shopping Cart style
+   - Displays selected Vinyls in a Shopping Cart style
 
 4. **Log in/Sign Up Page**
    - A page for logging in or creating an account
 
 
 ### Planned Features:
-- **Product Cart**: Users will be able to add items to a cart and proceed to checkout.
+- **Product Cart**: Users will be able to add vinyls to a cart and proceed to checkout.
 - **User Authentication**: Allow users to create accounts and log in for a personalized shopping experience.
 - **User Permissions**: Admins and users have different permissions.
 

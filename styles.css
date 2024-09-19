@@ -489,15 +489,36 @@ input{
         display: block;
         width: 100%;
     }
-
+    .hero img{
+        width: 90%;
+        height: auto;
+    }
     nav ul{
         display: block;
         padding-left: 10px;
     }
 
+    #home {
+        width: 90%;
+        height: 100px;
+        
+        padding: 20px;
+        margin: 5px;
+    }
+    
+    #home h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    
+    #home p {
+        font-size: 14px;
+    }
+
     main{
         width: 100%;
         margin: 1%;
+        padding: 10px 0;
     }
 
     aside{
@@ -506,6 +527,10 @@ input{
         margin-top: 0%;
     }
 
+    .products{
+        padding: 0px;
+        width: 400px;
+    }
     nav li{
         margin-left: 0px;
     }
