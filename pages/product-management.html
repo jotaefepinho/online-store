@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - USP 33+&frac13;</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-title">
+                <a href="../pages/index.html">
+                    <img src="../vinyl.svg" alt="Store Logo" class="store-logo">
+                    <h2>USP 33+&frac13;</h2>
+                </a>
+            </div>
+            <div class="login-navbar">
+                <a href="../pages/logout.html">Log out</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/catalog.html">Products</a></li>
+                <li><a href="../pages/admin.html">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-management">
+            <h2>Product Management</h2>
+            <button id="add-product-btn">Add New Product</button>
+            
+            <div class="product-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- Product rows will be injected here by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Add/Edit Product Modal -->
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modal-title">Add Product</h3>
+                <form id="product-form" class="product-form">
+                    <!-- Title Field -->
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+        
+                    <!-- Price Field -->
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+        
+                    <!-- Image Field -->
+                    <label for="image">Image URL:</label>
+                    <input type="text" id="image" name="image" required>
+        
+                    <!-- Description Field -->
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+        
+                    <!-- Tracklist Side A -->
+                    <label for="sideA">Tracklist Side A:</label>
+                    <textarea id="sideA" name="sideA" required></textarea>
+        
+                    <!-- Tracklist Side B -->
+                    <label for="sideB">Tracklist Side B:</label>
+                    <textarea id="sideB" name="sideB" required></textarea>
+        
+                    <!-- Singles -->
+                    <label for="singles">Singles:</label>
+                    <input type="text" id="singles" name="singles" required>
+        
+                    <!-- Save Button -->
+                    <button type="submit" id="save-product-btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 USP 33+&frac13;</p>
+    </footer>
+
+    <script src="../scripts/products.js"></script>
+    <script src="../scripts/product-management.js"></script>
+</body>
+</html>

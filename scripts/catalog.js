@@ -1,5 +1,3 @@
-console.log(products);
-
 const productsPerPage = 4; // Change this number to show more or fewer products
 let currentPage = 1;
 
