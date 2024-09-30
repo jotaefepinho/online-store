@@ -14,8 +14,7 @@
     flex-direction: row;
 }
 
-.album-cover {
-    position: absolute;
+.album-cover{
     max-width: 240px;
     width: auto;
     height: auto;
