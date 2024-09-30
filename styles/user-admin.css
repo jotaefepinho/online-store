@@ -1,0 +1,37 @@
+s/*===================================================================================================================*/
+/*----------------------------------------------# User Admin Page #--------------------------------------------------*/
+/*===================================================================================================================*/
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid var(--gray);
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: var(--white);
+}
+
+/* Form Styling */
+.user-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.user-form input, .user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.user-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}

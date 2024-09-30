@@ -1,0 +1,82 @@
+/*===================================================================================================================*/
+/*------------------------------------------------# Album Detail View #----------------------------------------------*/
+/*===================================================================================================================*/
+.album-detail {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: var(--white);
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.album-info {
+    display: flex;
+    align-items: center;
+}
+
+.album-cover {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-right: 30px;
+}
+
+.album-details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.artist {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.add-to-cart {
+    background-color: var(--deep-blue);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.add-to-cart:hover {
+    background-color: var(--deep-brown);
+}
+
+.tracklist {
+    margin-top: 40px;
+}
+
+.tracklist h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.tracklist ol {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 1.1em;
+}
+
+.tracklist ol li {
+    margin-bottom: 10px;
+}
+
+.singles{
+    font-weight: bold;
+}
