@@ -19,7 +19,7 @@ The project will include:
 - Product/services records include, at least: name, id, photo, description, price, quantity (in stock), and quantity sold.
 - Selling Products: Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system).
 - Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
-- Your functionality: Create a functionality that is specific to your application.
+- Your functionality: Create a functionality that is specific to your application. &check;
 - Responsive design for various screen sizes (desktop, tablet, mobile). &check;
 
 **Additional requirements** we might be able to implement:
@@ -60,6 +60,8 @@ The project will include:
 ![Navigation Diagram](./diagram.jpg)
 
 - Some sections are available in the Navigation Bar, but most are hidden behind the product or cart sections
+- Magenta-Colored Pages require being logged in with Admin Permissions
+- Cyan-Colored Pages require being logged in
 
 ---
 
