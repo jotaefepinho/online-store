@@ -44,8 +44,8 @@
 }
 
 .add-to-cart {
-    background-color: var(--deep-blue);
-    color: white;
+    background-color: var(--dark-blue);
+    color: var(--white);
     padding: 15px;
     border: none;
     cursor: pointer;
@@ -55,7 +55,7 @@
 }
 
 .add-to-cart:hover {
-    background-color: var(--deep-brown);
+    background-color: var(--dark-brown);
 }
 
 .tracklist {

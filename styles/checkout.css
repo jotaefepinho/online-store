@@ -1,18 +1,7 @@
 /*===================================================================================================================*/
 /*----------------------------------------------# Checkout Page #----------------------------------------------------*/
 /*===================================================================================================================*/
-:root {
-    --main-color: #D33F49;      /* Burnt Red */
-    --accent-color: #FDFD96;    /* Mustard Yellow */
-    --orange: #FFB30F;          /* Retro Orange */
-    --dark-brown: #3B3A30;      /* Deep Brown, inspired by vinyl */
-    --dark-blue: #2C2B2E;       /* Deep Black, inspired by vinyl */
-    --white: #ECEBE9;           /* Off-White */
-    --purple: #4E4D4A;          /* Grayish Purple for Details */
-    --gray: #5B5A59;            /* Neutral Gray */
-    --blue: #1B4079;            /* Deep Blue */
-    --blue-highlight: #1E555C;  /* Blue Highlighter */
-}
+
 /* Shopping Cart */
 #shopping-cart {
     max-width: 900px;
