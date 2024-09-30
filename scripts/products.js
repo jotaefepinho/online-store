@@ -97,14 +97,16 @@ const products = [
     },
     {
         id: 9,
-        title: 'Let It Be',
+        title: "Let It Be",
         price: 39.99, 
-        image: '../images/letitbe.jpeg', 
-        description: ' The last Beatles album to be released, Let It Be gave each Beatle his chance to prove his Maturity.', 
+        image: "../images/letitbe.jpeg", 
+        description: "The last Beatles album to be released, Let It Be gave each Beatle his chance to prove his growth with the band.",
         tracklist: {
             sideA: [' Two of Us', ' Dig a Pony', ' Across the Universe', ' I Me Mine', ' Dig It', ' Let It Be', ' Maggie Mae'], 
-            sideB: ["I've Got a Feeling", ' One After 909', ' The Long and Winding Road', ' For You Blue', ' Get Back']}, 
-        singles: ['Get Back', ' Across the Universe', ' Let It Be', ' The Long and Winding Road', ' For You Blue']}
+            sideB: ["I've Got a Feeling", ' One After 909', ' The Long and Winding Road', ' For You Blue', ' Get Back']
+        }, 
+        singles: ['Get Back', ' Across the Universe', ' Let It Be', ' The Long and Winding Road', ' For You Blue']
+    }
 ];
 
 localStorage.setItem('products', JSON.stringify(products));

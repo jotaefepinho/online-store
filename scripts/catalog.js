@@ -1,4 +1,3 @@
-const products = JSON.parse(localStorage.getItem('products'));
 console.log(products);
 
 const productsPerPage = 4; // Change this number to show more or fewer products
@@ -36,7 +35,7 @@ function displayPagination() {
     pagination.innerHTML = ''; // Clear previous pagination
 
     const totalPages = Math.ceil(products.length / productsPerPage);
-
+    console.log(totalPages);
     for (let i = 1; i <= totalPages; i++) {
         const pageButton = document.createElement('a');
         pageButton.textContent = i;
