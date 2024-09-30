@@ -9,7 +9,8 @@ const products = [
             sideA: ["Holy Ghost", "Canal St.", "Fine Whine", "L$D", "Excuse Me"],
             sideB: ["JD", "Lord Pretty Flacko Jodye 2", "Electric Body", "Jukebox Joints", "Max B"]
         },
-        singles: ["L$D", "Lord Pretty Flacko Jodye 2"]
+        singles: ["L$D", "Lord Pretty Flacko Jodye 2"],
+        sampleUrl: ""
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ const products = [
             sideA: ["Speak to Me", "Breathe", "On the Run", "Time", "The Great Gig in the Sky"],
             sideB: ["Money", "Us and Them", "Any Colour You Like", "Brain Damage", "Eclipse"]
         },
-        singles: ["Money", "Us and Them"]
+        singles: ["Money", "Us and Them"],
+        sampleUrl: ""
     },
     {
         id: 3,
@@ -33,7 +35,8 @@ const products = [
             sideA: ["Blue Suede Shoes", "I'm Counting on You", "I Got a Woman", "One-Sided Love Affair", "I Love You Because"],
             sideB: ["Just Because", "Tutti Frutti", "Tryin' to Get to You", "I'm Gonna Sit Right Down and Cry", "Blue Moon"]
         },
-        singles: ["Blue Suede Shoes", "Tutti Frutti"]
+        singles: ["Blue Suede Shoes", "Tutti Frutti"],
+        sampleUrl: ""
     },
     {
         id: 4,
@@ -45,7 +48,8 @@ const products = [
             sideA: ["Ghostbusters", "Cleanin' Up the Town", "Savin' the Day", "In the Name of Love", "I Can Wait Forever"],
             sideB: ["Hot Night", "Magic", "Main Title Theme", "Dana's Theme", "End Credits Theme"]
         },
-        singles: ["Ghostbusters", "Savin' the Day"]
+        singles: ["Ghostbusters", "Savin' the Day"],
+        sampleUrl: ""
     },
     {
         id: 5,
@@ -57,7 +61,8 @@ const products = [
             sideA: ["Good Morning", "Champion", "Stronger", "I Wonder", "Good Life"],
             sideB: ["Can't Tell Me Nothing", "Barry Bonds", "Flashing Lights", "Everything I Am", "The Glory"]
         },
-        singles: ["Stronger", "Good Life", "Can't Tell Me Nothing"]
+        singles: ["Stronger", "Good Life", "Can't Tell Me Nothing"],
+        sampleUrl: ""
     },
     {
         id: 6,
@@ -69,7 +74,8 @@ const products = [
             sideA: ["Good Day", "Greener", "Welcome to Tally Hall", "Taken for a Ride", "The Bidding"],
             sideB: ["Be Born", "Banana Man", "Just Apathy", "Spring and a Storm", "Two Wuv"]
         },
-        singles: ["Good Day", "Banana Man"]
+        singles: ["Good Day", "Banana Man"],
+        sampleUrl: ""
     },
     {
         id: 7,
@@ -81,7 +87,8 @@ const products = [
             sideA: ["On Sight", "Black Skinhead", "I Am a God", "New Slaves"],
             sideB: ["Hold My Liquor", "I'm In It", "Blood on the Leaves", "Bound 2"]
         },
-        singles: ["Black Skinhead", "Bound 2"]
+        singles: ["Black Skinhead", "Bound 2"],
+        sampleUrl: ""
     },
     {
         id: 8,
@@ -93,7 +100,8 @@ const products = [
             sideA: ["Wanna Be Startin' Somethin'", "Baby Be Mine", "The Girl Is Mine", "Thriller"],
             sideB: ["Beat It", "Billie Jean", "Human Nature", "P.Y.T. (Pretty Young Thing)", "The Lady in My Life"]
         },
-        singles: ["Thriller", "Billie Jean", "Beat It"]
+        singles: ["Thriller", "Billie Jean", "Beat It"],
+        sampleUrl: ""
     },
     {
         id: 9,
@@ -102,10 +110,11 @@ const products = [
         image: "../images/letitbe.jpeg", 
         description: "The last Beatles album to be released, Let It Be gave each Beatle his chance to prove his growth with the band.",
         tracklist: {
-            sideA: [' Two of Us', ' Dig a Pony', ' Across the Universe', ' I Me Mine', ' Dig It', ' Let It Be', ' Maggie Mae'], 
-            sideB: ["I've Got a Feeling", ' One After 909', ' The Long and Winding Road', ' For You Blue', ' Get Back']
+            sideA: ['Two of Us', 'Dig a Pony', 'Across the Universe', 'I Me Mine', 'Dig It', 'Let It Be', 'Maggie Mae'], 
+            sideB: ["I've Got a Feeling", 'One After 909', 'The Long and Winding Road', 'For You Blue', 'Get Back']
         }, 
-        singles: ['Get Back', ' Across the Universe', ' Let It Be', ' The Long and Winding Road', ' For You Blue']
+        singles: ['Get Back', 'Across the Universe', 'Let It Be', 'The Long and Winding Road', 'For You Blue'],
+        sampleUrl: "../samples/getback.ogg"
     }
 ];
 

@@ -1,22 +1,25 @@
-s/*===================================================================================================================*/
+/*===================================================================================================================*/
 /*----------------------------------------------# User Admin Page #--------------------------------------------------*/
 /*===================================================================================================================*/
 .user-table {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-table table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 .user-table th, .user-table td {
-    border: 1px solid var(--gray);
-    padding: 8px;
-    text-align: left;
+    padding: 15px;
+    border: 1px solid var(--white);
 }
 
 .user-table th {
-    background-color: var(--white);
+    background-color: var(--dark-blue);
+    color: white;
 }
 
 /* Form Styling */
@@ -34,4 +37,57 @@ s/*=============================================================================
 .user-form button {
     margin-top: 20px;
     padding: 10px 20px;
+}
+
+/* Form Styling */
+.user-form {
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.user-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: var(--dark-brown);
+}
+
+.user-form input, .user-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.user-form input:focus, .user-form select:focus {
+    outline: none;
+    border-color: var(--dark-brown);
+}
+
+.user-form button {
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.user-form button:hover {
+    background-color: var(--dark-blue);
+}
+
+@media (max-width: 800px){
+    .user-table{
+        width: 100%;
+        overflow: scroll;
+    }
 }

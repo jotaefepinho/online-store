@@ -119,3 +119,13 @@
 .product-form button:hover {
     background-color: var(--blue-highlight);
 }
+
+@media (max-width: 800px){
+    .product-management{
+        max-width: 100%;
+        overflow: scroll;
+    }
+    .product-table{
+        width: 100%;
+    }
+}

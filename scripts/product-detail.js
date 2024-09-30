@@ -46,7 +46,7 @@ function loadProduct() {
 
         tracklistContainer.innerHTML = sideAHTML + sideBHTML;
     } else {
-        document.body.innerHTML = "<h1>Product not found</h1>";
+        document.body.innerHTML = "<main class='error-page'><h1 class='error-404'>404</h1><p>Oops, the page you're looking for does not exist.</p><p>Go back to the <a href='../pages/index.html'>home page</a> or use the navigation bar.</p></main>";
     }
 }
 

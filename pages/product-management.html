@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Management - USP 33+&frac13;</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/product-management.css">
 </head>
 <body>
     <header>
@@ -29,7 +30,7 @@
     </header>
 
     <main>
-        <section id="product-management">
+        <section id="product-management" class="product-management">
             <h2>Product Management</h2>
             <button id="add-product-btn">Add New Product</button>
             
@@ -67,11 +68,11 @@
         
                     <!-- Image Field -->
                     <label for="image">Image URL:</label>
-                    <input type="text" id="image" name="image" required>
+                    <input type="text" id="image" name="image">
         
                     <!-- Description Field -->
                     <label for="description">Description:</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <textarea id="description" name="description"></textarea>
         
                     <!-- Tracklist Side A -->
                     <label for="sideA">Tracklist Side A:</label>
@@ -83,7 +84,11 @@
         
                     <!-- Singles -->
                     <label for="singles">Singles:</label>
-                    <input type="text" id="singles" name="singles" required>
+                    <input type="text" id="singles" name="singles">
+                    
+                    <!-- Sample -->
+                    <label for="sample">Sample URL:</label>
+                    <input type="text" id="sample" name="sample">
         
                     <!-- Save Button -->
                     <button type="submit" id="save-product-btn">Save</button>
