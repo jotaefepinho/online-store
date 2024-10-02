@@ -9,6 +9,10 @@
 This is a simple **Online Store** project built with HTML, CSS, and basic JavaScript. The website will offer a vinyl listing page, a product grid for showcasing products, a shopping cart, a log in page, and a page for finalizing orders. The site is structured specifically for easy navigation.
 
 ---
+# TODO:
+   - Edit Profile Page
+   - Finalize Order Page
+
 
 ## Requirements
 The project will include:

@@ -135,6 +135,30 @@ input[type="text"] {
     background-color: var(--dark-brown);
 }
 
+.payment-button {
+    text-decoration: none;
+
+    background-color: var(--dark-blue);
+    color: var(--white);
+    
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 150px;
+    margin: 0 auto;
+
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.payment-button:hover {
+    background-color: var(--dark-brown);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 800px) {
     .payment-section {
         padding: 15px;
