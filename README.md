@@ -52,7 +52,7 @@ The project will include:
 ### Planned Features:
 - **Product Cart**: Users will be able to add vinyls to a cart and proceed to checkout.
 - **User Authentication**: Allow users to create accounts and log in for a personalized shopping experience.
-- **User Permissions**: Admins and users have different permissions.
+- **User Permissions**: Admins and users have different permissions. Admins can add/delete products, add/update stock quantities, add/remove user permissions.
 
 
 ### Extra Features
