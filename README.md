@@ -13,6 +13,8 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
    - Edit Profile Page
    - Finalize Order Page
    - Product Quantity in Stock
+   - Add images and covers "alt" description
+   - Style Admin pages differently
 
 
 ## Requirements
