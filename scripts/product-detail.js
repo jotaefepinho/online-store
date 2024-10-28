@@ -16,6 +16,10 @@ function loadProduct() {
         document.getElementById('album-description').textContent = product.description;
         document.getElementById('album-cover').src = product.image;
 
+        // Display Genre
+        const genreContainer = document.getElementById('album-genre');
+        genreContainer.textContent = product.genre.map(genre => genre.split(' ').map(word => word.split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join('-')).join(' ')).join(', ');
+
         // Render Tracklist
         const tracklistContainer = document.getElementById('tracklist-container');
 
