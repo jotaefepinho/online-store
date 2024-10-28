@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 20px 15px;
 }
 
 .product-item{
@@ -23,7 +23,7 @@
     flex-direction: row;
     align-items: center;
 
-    width: 300px;
+    width: 350px;
     border: 1px solid var(--gray);
     background-color: var(--white);
     padding: 20px;
@@ -69,4 +69,10 @@
 
 .product-info button:hover {
     background-color: var(--blue-highlight);
+}
+
+@media (max-width: 800px){
+    .product-item{
+        width: 300px;
+    }
 }
