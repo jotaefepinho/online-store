@@ -4,6 +4,14 @@ const productsPerPage = 16; // Change this number to show more or fewer products
 let currentPage = 1;
 
 function displayProducts() {
+    const query = searchInput.value.toLowerCase();
+
+    const filteredProducts = products.filter(product =>
+        product.title.toLowerCase().includes(query) ||
+        product.genre.some(genre => genre.toLowerCase().includes(query)) ||
+        product.artist.toLowerCase().includes(query)
+    );
+    
     const productGrid = document.getElementById('product-grid');
     productGrid.innerHTML = ''; // Clear previous products
 
@@ -11,7 +19,7 @@ function displayProducts() {
     const endIndex = Math.min(startIndex + productsPerPage, products.length);
 
     for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+        const product = filteredProducts[i];
         const productItem = `
             <a class="no-decoration" href="product.html?id=${product.id}">
                 <div class="product-item">
