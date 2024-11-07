@@ -46,6 +46,22 @@ function displayPagination() {
         pagination.appendChild(pageButton);
     }
 }
+function openProductPage(productId) {
+    
+    localStorage.setItem('currentPage', currentPage); 
+    window.location.href = `product.html?productId=${productId}`;
+}
 
+
+function loadPagination() {
+    const savedPage = localStorage.getItem('currentPage');
+    if (savedPage) {
+        currentPage = parseInt(savedPage);
+        localStorage.removeItem('currentPage');
+        loadProducts(currentPage);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadPagination);
 // Initialize the product display
 displayProducts();

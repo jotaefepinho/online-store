@@ -54,5 +54,14 @@ function loadProduct() {
     }
 }
 
+function goBackToCatalog() {
+    const savedPage = localStorage.getItem('currentPage');
+    // Redireciona para a página do catálogo com o número da página salvo
+    if (savedPage) {
+        window.location.href = `catalog.html?page=${savedPage}`;
+    } else {
+        window.location.href = 'catalog.html';
+    }
+}
 // only call function on page loaded
 window.onload = loadProduct;
