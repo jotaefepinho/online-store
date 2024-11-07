@@ -11,6 +11,8 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
 ---
 # TODO:
    - Edit Profile Page
+   - Add Product Script
+   - Search Product Script/Page
    - Finalize Order Page
    - Product Quantity in Stock
    - Add images and covers "alt" description
