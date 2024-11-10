@@ -48,17 +48,20 @@ The project will include:
 4. **Log in/Sign Up Page**
    - A page for logging in or creating an account
 
+5. **Search Bar**: 
+   - Functionality to search for products by name, artist name and genre.
+
+6. **Product Cart**:
+   - Users will be able to add vinyls to a cart and proceed to checkout.
 
 ### Planned Features:
-- **Product Cart**: Users will be able to add vinyls to a cart and proceed to checkout.
 - **User Authentication**: Allow users to create accounts and log in for a personalized shopping experience.
 - **User Permissions**: Admins and users have different permissions. Admins can add/delete products, add/update stock quantities, add/remove user permissions.
 
 
 ### Extra Features
-- **Search Bar**: Functionality to search for products by name.
-
-
+- **None Planned**
+  
 ### Navigation Flow:
 
 ![Navigation Diagram](./diagram.jpg)
@@ -72,7 +75,7 @@ The project will include:
 ## Comments About the Code
 - **HTML Structure**: Standard use of basic HTML tags and classed divs
 - **CSS Layout**: Flexbox and grid are used for creating a responsive design. Media queries will ensure the design adapts to various screen sizes.
-- **JavaScript (Planned)**: Currently, the project does not have interactive JavaScript. Future iterations will include scripts for the shopping cart and log in procedures.
+- **JavaScript**: Most pages include .js scripts to handle functions, animations stylings or local storage.
 
 ---
 
@@ -93,7 +96,7 @@ Initial manual tests will show:
 - Navigation works smoothly between all sections.
 - Product grid displays correctly on desktop and mobile views.
 - Buttons and form fields are functional but not yet connected to a back-end.
-
+- Pages work with simple implementations of their uses.
 ---
 
 ## Build Procedures
