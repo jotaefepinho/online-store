@@ -15,7 +15,8 @@
 }
 
 .album-cover{
-    max-width: 240px;
+    max-width: 260px;
+    max-height: 260px;
     width: auto;
     height: auto;
     
@@ -44,6 +45,17 @@
     font-size: 1.1em;
     margin-bottom: 30px;
     line-height: 1.5;
+}
+
+.album-genre {
+    background-color: var(--white);
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: var(--dark-blue);
+    width: 200px;
 }
 
 .add-to-cart, .play-sample {

@@ -11,7 +11,9 @@ const products = [
         },
         singles: ["L$D", "Lord Pretty Flacko Jodye 2"],
         sampleUrl: "",
-        genre: ['rap','hip-hop', 'psychedelic']
+        genre: ['rap','hip-hop', 'psychedelic'],
+        artist: 'A$AP Rocky',
+        stock: 10,
     },
     {
         id: 2,
@@ -25,7 +27,9 @@ const products = [
         },
         singles: ["Money", "Us and Them"],
         sampleUrl: "",
-        genre:  ["progressive rock", "rock", "classic rock"]
+        genre:  ["progressive rock", "rock", "classic rock"],
+        artist: 'Pink Floyd',
+        stock: 10,
     },
     {
         id: 3,
@@ -39,7 +43,9 @@ const products = [
         },
         singles: ["Blue Suede Shoes", "Tutti Frutti"],
         sampleUrl: "",
-        genre: ["rock", "classic rock"]
+        genre: ["rock", "classic rock"],
+        artist: 'Elvis Presley',
+        stock: 10,
     },
     {
         id: 4,
@@ -53,7 +59,9 @@ const products = [
         },
         singles: ["Ghostbusters", "Savin' the Day"],
         sampleUrl: "",
-        genre: ["soundtrack", "pop"]
+        genre: ["soundtrack", "pop"],
+        artist: 'Various',
+        stock: 10,
     },
     {
         id: 5,
@@ -67,7 +75,9 @@ const products = [
         },
         singles: ["Stronger", "Good Life", "Can't Tell Me Nothing"],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },
     {
         id: 6,
@@ -81,7 +91,9 @@ const products = [
         },
         singles: ["Good Day", "Banana Man"],
         sampleUrl: "",
-        genre: ["alt rock", "pop", "alternative"]
+        genre: ["alt rock", "pop", "alternative"],
+        artist: 'Tally Hall',
+        stock: 10,
     },
     {
         id: 7,
@@ -95,7 +107,9 @@ const products = [
         },
         singles: ["Black Skinhead", "Bound 2"],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },
     {
         id: 8,
@@ -109,7 +123,9 @@ const products = [
         },
         singles: ["Thriller", "Billie Jean", "Beat It"],
         sampleUrl: "",
-        genre: ["pop, dance"]
+        genre: ["pop, dance"],
+        artist: 'Michael Jackson',
+        stock: 10,
     },
     {
         id: 9,
@@ -123,7 +139,9 @@ const products = [
         }, 
         singles: ['Get Back', 'Across the Universe', 'Let It Be', 'The Long and Winding Road', 'For You Blue'],
         sampleUrl: "../samples/getback.ogg",
-        genre: ['classic rock', 'rock']
+        genre: ['classic rock', 'rock'],
+        artist: 'The Beatles',
+        stock: 10,
     },
     {
         id: 10,
@@ -137,7 +155,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rock', 'pop rock', 'psychedelic pop', 'progressive pop']
+        genre: ['rock', 'pop rock', 'psychedelic pop', 'progressive pop'],
+        artist: 'The Beatles',
+        stock: 10,
     },
     {
         id: 11,
@@ -151,7 +171,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['classic rock', 'psychedelic', 'rock']
+        genre: ['classic rock', 'psychedelic', 'rock'],
+        artist: 'The Beatles',
+        stock: 10,
     },
     {
         id: 12,
@@ -165,7 +187,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rock', 'classic rock', 'psychedelic']
+        genre: ['rock', 'classic rock', 'psychedelic'],
+        artist: 'The Beatles',
+        stock: 10,
     },
     {
         id: 13,
@@ -179,7 +203,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['electronic', 'big beat', 'techno']
+        genre: ['electronic', 'big beat', 'techno'],
+        artist: 'The Prodigy',
+        stock: 10,
     },
     {
         id: 14,
@@ -193,7 +219,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['electronic', 'big beat', 'techno']
+        genre: ['electronic', 'big beat', 'techno'],
+        artist: 'The Prodigy',
+        stock: 10,
     },
     {
         id: 15,
@@ -208,20 +236,23 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['pop', 'rock', 'pop rock', 'pop punk'],
+        artist: 'Olivia Rodrigo',
+        stock: 10,
     },
     {
         id: 16,
-        title: "Guts",
-        price: 26.99,
-        image: "https://lastfm.freetls.fastly.net/i/u/300x300/e39eb31f874f4a5c4afa836845141437.jpg",
-        description: "GUTS is the second studio album by American singer-songwriter Olivia Rodrigo. It was released on September 8, 2023, Via Geffen Records/Interscope Records. It was preceded by its lead single \"Vampire\", released on June 30, 2023.",
+        title: "GUTS (Deluxe)",
+        price: 27.99,
+        image: "https://lastfm.freetls.fastly.net/i/u/300x300/5ee4030c238234514efd1495153633b1.jpg",
+        description: "No description available..",
         tracklist: {
-            sideA: ['track 1', 'track 2', 'vampire', 'track 4', 'track 5', 'track 6'],
-            sideB: ['track 7', 'track 8', 'track 9', 'track 10', 'track 11', 'track 12']
+            sideA: ['all-american bitch', 'bad idea right?', 'vampire', 'lacy', 'ballad of a homeschooled girl', 'making the bed', 'logical', 'get him back!'],
+            sideB: ['love is embarrassing', 'the grudge', "pretty isn't pretty", 'teenage dream', 'obsessed', 'scared of my guitar', 'stranger', "girl i've always been"]
         },
         singles: [],
         sampleUrl: "",
-        genre: ['pop rock', 'power pop', 'pop', 'indie rock'],
+        genre: ['indie rock', 'pop punk'],
+        artist: 'Olivia Rodrigo',
     },
     {
         id: 17,
@@ -235,22 +266,11 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },
     {
-        id: 18,
-        title: "808s",
-        price: 40.99,
-        image: "https://lastfm.freetls.fastly.net/i/u/300x300/347254ecb3ad491ea6a1db4af3eb744d.png",
-        description: "No description available..",
-        tracklist: {
-            sideA: [],
-            sideB: []
-        },
-        singles: [],
-        sampleUrl: "",
-        genre: ['rap','hip-hop']
-    },{
         id: 19,
         title: "The Life of Pablo",
         price: 15.99,
@@ -262,7 +282,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },{
         id: 20,
         title: "ye",
@@ -275,7 +297,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     }
     ,{
         id: 21,
@@ -289,7 +313,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },
     {
         id: 22,
@@ -303,7 +329,9 @@ const products = [
         },
         singles: [],
         sampleUrl: "",
-        genre: ['rap','hip-hop']
+        genre: ['rap','hip-hop'],
+        artist: 'Kanye West',
+        stock: 10,
     },
     {
         id: 23,
@@ -318,6 +346,8 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['pop', 'disco', 'dance-pop', 'nu-disco', 'synthpop'],
+        artist: 'Dua Lipa',
+        stock: 10,
     },    
     {
         id: 24,
@@ -332,6 +362,8 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['pop', 'dance', 'electropop', 'synthpop', 'dance-pop'],
+        artist: 'Dua Lipa',
+        stock: 10,
     },
     {
         id: 25,
@@ -346,6 +378,8 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['soul', 'pop'],
+        artist: 'Adele',
+        stock: 10,
     },
     {
         id: 26,
@@ -360,6 +394,8 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['soul', 'pop'],
+        artist: 'Adele',
+        stock: 10,
     },
     {
         id: 27,
@@ -374,6 +410,8 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['soul', 'pop'],
+        artist: 'Adele',
+        stock: 10,
     },
     {
         id: 28,
@@ -388,7 +426,40 @@ const products = [
         singles: [],
         sampleUrl: "",
         genre: ['soul', 'pop'],
+        artist: 'Adele',
+        stock: 10,
+    },
+    {
+        id: 29,
+        title: "emails i can't send",
+        price: 31.99,
+        image: "https://lastfm.freetls.fastly.net/i/u/300x300/e4198cd6ab64b73da4a8387bb87c62d3.png",
+        description: "\"emails i can't send\" is the fifth studio album by American singer and songwriter Sabrina Carpenter, released on July 15, 2022 by Island Records, and was recorded in New York. Sabrina has already expressed that this record has turned into her most honest and personal one expressing that this record is “the first one where I am myself”. The original release of the record was first teased during her music video for the January 2021 single “Skin”, where the singer can be seen on top of a car with the license plate “SC52021”.",
+        tracklist: {
+            sideA: ['emails i can’t send', 'Vicious', 'Read your Mind', 'Tornado Warnings', 'because i liked a boy', 'Already Over'],
+            sideB: ['how many things', 'bet u wanna', 'Nonsense', 'Fast Times', 'skinny dipping', 'Bad for Business', 'decode']
+        },
+        singles: [],
+        sampleUrl: "",
+        genre: ['pop', 'indie pop', 'folk', 'rnb'],
+        artist: 'Sabrina Carpenter',
+    },
+    {
+        id: 30,
+        title: "Short n' Sweet",
+        price: 15.99,
+        image: "https://lastfm.freetls.fastly.net/i/u/300x300/8bf0ab10e23c95ccea08f75bc62e4865.png",
+        description: "Short n' Sweet is the sixth studio album by American singer Sabrina Carpenter. It was released on August 23, 2024, through Island Records. The record, marking Carpenter's second album with the record label after emails i can't send (2022).",
+        tracklist: {
+            sideA: ['Please Please Please'],
+            sideB: ['Espresso']
+        },
+        singles: [],
+        sampleUrl: "",
+        artist: 'Sabrina Carpenter',
+        genre: ['pop', 'aoty', 'country', 'synthpop'],
     }
+    
 
 ];
 
