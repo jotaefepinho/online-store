@@ -34,7 +34,6 @@
     <main>
         <section id="user-management">
             <h2>User Management</h2>
-            <button id="add-user-btn">Add New User</button>
             
             <div class="user-table">
                 <table>
@@ -52,6 +51,8 @@
                     </tbody>
                 </table>
             </div>
+            
+            <button id="add-user-btn">Add New User</button>
         </section>
 
         <!-- Add/Edit User Modal -->
@@ -60,22 +61,18 @@
                 <span class="close">&times;</span>
                 <h3 id="modal-title">Add User</h3>
                 <form id="user-form" class="user-form">
-                    <!-- Name Field -->
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
         
-                    <!-- Email Field -->
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
         
-                    <!-- Role Field -->
                     <label for="role">Role:</label>
                     <select id="role" name="role" required>
                         <option value="admin">Admin</option>
                         <option value="viewer">Viewer</option>
                     </select>
         
-                    <!-- Save Button -->
                     <button type="submit" id="save-user-btn">Save</button>
                 </form>
             </div>
