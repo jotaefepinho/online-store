@@ -63,5 +63,35 @@ function goBackToCatalog() {
         window.location.href = 'catalog.html';
     }
 }
+
+// Função para redirecionar para a página de carrinho
+function goToCart() {
+    window.location.href = '../pages/shopping-cart.html';
+    console.log(cartItems);
+}
+
+function addToCart() {
+    const productId = getQueryParam('id');
+    const product = products.find(p => p.id == productId);
+    if (!product) return;
+
+    const quantity = parseInt(document.getElementById('quantity').value) || 1;
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Verifica se o produto já está no carrinho
+    const existingItem = cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity += quantity; // Atualiza a quantidade
+    } else {
+        // Adiciona um novo item ao carrinho
+        cartItems.push({ id: product.id, title: product.title, price: product.price, image: product.image, quantity });
+    }
+
+    // Salva o carrinho atualizado no localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert(`${product.title} foi adicionado ao seu carrinho!`);
+}
+
+
 // only call function on page loaded
 window.onload = loadProduct;

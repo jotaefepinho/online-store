@@ -58,7 +58,7 @@
     width: 200px;
 }
 
-.add-to-cart, .play-sample {
+.add-to-cart, .play-sample, .go-to-cart {
     background-color: var(--dark-blue);
     color: var(--white);
     padding: 15px;
@@ -68,7 +68,9 @@
     border-radius: 5px;
     width: 150px;
 }
-
+.go-to-cart{
+    background-color: var(--blue);
+}
 .add-to-cart:hover {
     background-color: var(--dark-brown);
 }
@@ -127,7 +129,15 @@
     opacity: 1;
     animation: spin 1.8s linear infinite;
 }
-
+.quantity-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-right: 5px;
+}
 /* Spin animation*/
 @keyframes spin {
     from {

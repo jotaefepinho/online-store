@@ -1,23 +1,40 @@
-const productsPerPage = 16; // Change this number to show more or fewer products
+const productsPerPage = 16;
 let currentPage = 1;
+const searchInput = document.getElementById('search-input');
 
 function displayProducts() {
-    const productGrid = document.getElementById('product-grid');
-    productGrid.innerHTML = ''; // Clear previous products
+    const query = searchInput.value.toLowerCase();
 
+    // Filtrar produtos com base no termo de busca, ou mostrar todos se estiver vazio
+    const filteredProducts = query
+        ? products.filter(product =>
+            product.title.toLowerCase().includes(query) ||
+            product.genre.some(genre => genre.toLowerCase().includes(query))||
+            product.artist.toLowerCase().includes(query) 
+          )
+        : products;
+
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ''; // Limpa os produtos anteriores
+
+    // Atualizar o número total de páginas com base nos produtos filtrados
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
     const startIndex = (currentPage - 1) * productsPerPage;
-    const endIndex = Math.min(startIndex + productsPerPage, products.length);
+    const endIndex = Math.min(startIndex + productsPerPage, filteredProducts.length);
 
     for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+        const product = filteredProducts[i];
+        if (!product) continue; // Proteção para caso algum índice esteja fora do range
+
         const productItem = `
             <a class="no-decoration" href="product.html?id=${product.id}">
                 <div class="product-item">
                     <img src="${product.image}" alt="${product.title}">
                     <div class="product-info">
                         <h3>${product.title}</h3>
-                        <p>$${product.price.toFixed(2)}</p>
-                        <button>Add to Cart</button>
+                        <p>${product.artist} </p>
+                        <p>${product.price.toFixed(2)}</p>
+                        <button>More Details</button>
                     </div>
                 </div>
             </a>
@@ -25,15 +42,13 @@ function displayProducts() {
         productGrid.innerHTML += productItem;
     }
 
-    displayPagination();
+    displayPagination(totalPages);
 }
 
-function displayPagination() {
+function displayPagination(totalPages) {
     const pagination = document.getElementById('pagination');
-    pagination.innerHTML = ''; // Clear previous pagination
+    pagination.innerHTML = ''; // Limpa a paginação anterior
 
-    const totalPages = Math.ceil(products.length / productsPerPage);
-    console.log(totalPages);
     for (let i = 1; i <= totalPages; i++) {
         const pageButton = document.createElement('a');
         pageButton.textContent = i;
@@ -46,22 +61,26 @@ function displayPagination() {
         pagination.appendChild(pageButton);
     }
 }
+
 function openProductPage(productId) {
-    
     localStorage.setItem('currentPage', currentPage); 
     window.location.href = `product.html?productId=${productId}`;
 }
-
 
 function loadPagination() {
     const savedPage = localStorage.getItem('currentPage');
     if (savedPage) {
         currentPage = parseInt(savedPage);
         localStorage.removeItem('currentPage');
-        loadProducts(currentPage);
     }
+    displayProducts();
 }
 
+// Atualiza os produtos ao digitar na barra de busca
+searchInput.addEventListener('input', () => {
+    currentPage = 1; // Reinicia para a primeira página ao fazer uma nova busca
+    displayProducts();
+});
+
+// Carrega a página inicial
 document.addEventListener('DOMContentLoaded', loadPagination);
-// Initialize the product display
-displayProducts();

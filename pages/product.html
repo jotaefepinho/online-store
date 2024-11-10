@@ -42,7 +42,12 @@
                     <p class="artist" id="album-artist"></p>
                     <p class="price" id="album-price"></p>
                     <p class="description" id="album-description"></p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="quantity-input" id="quantity" value="1" min="1">
+                    
+                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                    <button class="go-to-cart" onclick="goToCart()">Go to Cart</button>
                 </div>
             </div>
             <div class="album-genre" id="album-genre">
@@ -57,7 +62,6 @@
     <footer>
         <p>&copy; 2024 USP 33+&frac13;</p>
     </footer>
-
 
     <!-- JavaScript -->
     <script src="../scripts/products.js"></script>

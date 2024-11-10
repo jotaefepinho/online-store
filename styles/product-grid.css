@@ -43,12 +43,12 @@
 }
 
 .product-info {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
 }
-
+.product-info p{
+    color: black;
+}
 .product-item h3 {
     margin-bottom: 5px;
     color: var(--dark-blue);
@@ -56,7 +56,6 @@
     overflow: hidden; /* Hides Extra Text */
     text-overflow: ellipsis; /* Uses '...' for overflows */
 }
-
 .product-info button {
     margin-top: auto; /* sticks button to bottom */
     padding: 10px;
