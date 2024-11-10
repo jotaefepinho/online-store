@@ -4,17 +4,12 @@
 ---
 - Joao Francisco Caprioli Barbosa Camargo de Pinho - 10748500
 - Arturo Javier Kolster Borges - 16285381
-- Pedro Liduino do Nascimento - 11796847
 
 This is a simple **Online Store** project built with HTML, CSS, and basic JavaScript. The website will offer a vinyl listing page, a product grid for showcasing products, a shopping cart, a log in page, and a page for finalizing orders. The site is structured specifically for easy navigation.
 
 ---
 # TODO:
-   - Edit Profile Page
-   - Add Product Script
-   - Search Product Script/Page
    - Finalize Order Page
-   - Product Quantity in Stock
    - Add images and covers "alt" description
    - Style Admin pages differently
 
