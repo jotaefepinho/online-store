@@ -64,7 +64,7 @@ The project will include:
   
 ### Navigation Flow:
 
-![Navigation Diagram](./diagram.jpg)
+![Navigation Diagram](./diagram.png)
 
 - Some sections are available in the Navigation Bar, but most are hidden behind the product or cart sections
 - Magenta-Colored Pages require being logged in with Admin Permissions
