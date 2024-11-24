@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - USP 33+&frac13;</title>
+    <link rel="icon" type="image/x-icon" href="../images/vinyl.svg">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-title">
+                <a href="../pages/index.html">
+                    <img src="../images/vinyl.svg" alt="Store Logo" class="store-logo">
+                    <h2>USP 33+&frac13;</h2>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/product-management.html">Product Management</a></li>
+                <li><a href="../pages/user-management.html">User Management</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-dashboard">
+        <section class="admin-section">
+            <h2>Admin Panel</h2>
+            <div class="admin-links">
+                <a href="../pages/product-management.html" class="admin-link">
+                    <div class="admin-card">
+                        <img src="../product-icon.png" alt="Product Management" class="admin-icon">
+                        <h3>Product Management</h3>
+                        <p>Manage the products available in the catalog, including adding, editing, or removing products.</p>
+                    </div>
+                </a>
+                <a href="../pages/user-management.html" class="admin-link">
+                    <div class="admin-card">
+                        <img src="../user-icon.png" alt="User Management" class="admin-icon">
+                        <h3>User Management</h3>
+                        <p>Manage user accounts, roles, and permissions within the platform.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 USP 33+&frac13;</p>
+    </footer>
+
+    <script>const products = [
+    {
+        id: 1,
+        title: "At.Long.Last.A$AP",
+        price: 19.99,
+        image: "../images/atlonglast.jpg",
+        description: "The second studio album by American rapper ASAP Rocky, released in 2015. It includes a mix of psychedelic and experimental elements.",
+        tracklist: {
+            sideA: ["Holy Ghost", "Canal St.", "Fine Whine", "L$D", "Excuse Me"],
+            sideB: ["JD", "Lord Pretty Flacko Jodye 2", "Electric Body", "Jukebox Joints", "Max B"]
+        },
+        singles: ["L$D", "Lord Pretty Flacko Jodye 2"],
+        sampleUrl: "",
+        genre: ['rap','hip-hop', 'psychedelic'],
+        artist: 'A$AP Rocky',
+        stock: 10,
+    }
+];
+
+localStorage.setItem('products', JSON.stringify(products));</script>
+    <script>let currentProductId = null;
+
+const productList = document.getElementById('product-list');
+const productModal = document.getElementById('product-modal');
+const modalTitle = document.getElementById('modal-title');
+const productForm = document.getElementById('product-form');
+const addProductBtn = document.getElementById('add-product-btn');
+const closeModalBtn = document.querySelector('.close');
+
+
+function loadProducts() {
+    productList.innerHTML = '';
+    products.forEach(product => {
+        const productRow = `
+            <tr>
+                <td><img src="${product.image}" alt="${product.title}"></td>
+                <td>${product.title}</td>
+                <td>$${product.price.toFixed(2)}</td>
+                <td>${product.description}</td>
+                <td>
+                    <button class="edit-btn" data-id="${product.id}">Edit</button>
+                    <button class="delete-btn" data-id="${product.id}">Delete</button>
+                </td>
+            </tr>
+        `;
+        productList.innerHTML += productRow;
+    });
+
+
+    document.querySelectorAll('.edit-btn').forEach(btn => {
+        btn.addEventListener('click', openEditModal);
+    });
+
+
+    document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', deleteProduct);
+    });
+}
+
+
+addProductBtn.addEventListener('click', () => {
+    modalTitle.textContent = 'Add Product';
+    productForm.reset();
+    currentProductId = null;
+    productModal.style.display = 'flex';
+});
+
+// Fechar modal
+closeModalBtn.addEventListener('click', () => {
+    productModal.style.display = 'none';
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && productModal.style.display === 'flex') {
+        productModal.style.display = 'none';
+    }
+});
+// Abrir modal de edição de produto
+function openEditModal(e) {
+    const productId = e.target.getAttribute('data-id');
+    const product = products.find(p => p.id == productId);
+
+    modalTitle.textContent = 'Edit Product';
+    productForm.title.value = product.title;
+    productForm.price.value = product.price;
+    productForm.image.value = product.image;
+    productForm.description.value = product.description;
+    productForm.sideA.value = product.tracklist.sideA.join(', ');
+    productForm.sideB.value = product.tracklist.sideB.join(', ');
+    productForm.singles.value = product.singles.join(', ');
+    productForm.sample.value = product.sampleUrl;
+
+    currentProductId = product.id; // Define o ID do produto atual
+    productModal.style.display = 'flex';
+}
+
+// Função para deletar produto
+function deleteProduct(e) {
+    const productId = e.target.getAttribute('data-id');
+    products = products.filter(p => p.id != productId);
+    loadProducts();
+}
+
+// Função para salvar produto (adicionar/editar)
+productForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = {
+        title: productForm.title.value,
+        price: parseFloat(productForm.price.value),
+        image: productForm.image.value,
+        description: productForm.description.value,
+        tracklist: {
+            sideA: productForm.sideA.value.split(',').map(track => track.trim()),
+            sideB: productForm.sideB.value.split(',').map(track => track.trim()),
+        },
+        singles: productForm.singles.value.split(',').map(single => single.trim()),
+        sampleUrl: productForm.sample.value
+    };
+
+    if (currentProductId === null) {
+        // Adicionar novo produto
+        formData.id = products.length + 1;
+        products.push(formData);
+    } else {
+        // Editar produto existente
+        const productIndex = products.findIndex(p => p.id == currentProductId);
+        products[productIndex] = { ...formData, id: currentProductId };
+    }
+
+    loadProducts();
+    productModal.style.display = 'none';
+});
+
+// Carregar produtos iniciais
+loadProducts();</script>
+</body>
+</html>

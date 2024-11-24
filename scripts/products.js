@@ -14,6 +14,7 @@ const products = [
         genre: ['rap','hip-hop', 'psychedelic'],
         artist: 'A$AP Rocky',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 2,
