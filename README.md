@@ -12,6 +12,7 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
    - Finalize Order Page
    - Add images and covers "alt" description
    - Style Admin pages differently
+   - Extra Feature!!!
 
 
 ## Requirements
