@@ -46,29 +46,29 @@
             <form id="address-form">
                 <h3>Address Information</h3>
                 <label for="street">Street:</label>
-                <input type="text" id="street" name="street" required value="Rua Dois">
+                <input type="text" id="street" name="street" required>
                 
                 <label for="number">Number:</label>
-                <input type="text" id="number" name="number" required value="2">
+                <input type="text" id="number" name="number" required>
                 
                 <label for="city">City:</label>
-                <input type="text" id="city" name="city" required value="Campinas">
+                <input type="text" id="city" name="city" required>
                 
                 <label for="country">Country:</label>
-                <input type="text" id="country" name="country" required value="Brazil">
+                <input type="text" id="country" name="country" required>
             </form>
 
             <!-- Payment Form -->
             <form id="payment-form">
                 <h3>Payment Information</h3>
                 <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" pattern="^\d{16}$" required value="1111000000001111">
+                <input type="text" id="card-number" name="card-number" pattern="^\d{16}$" required>
                 
                 <label for="expiration-date">Expiration Date:</label>
-                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required value="11/25">
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY">
                 
                 <label for="pin">PIN:</label>
-                <input type="password" id="pin" name="pin" pattern="^\d{4}$" required value="1234">
+                <input type="password" id="pin" name="pin" pattern="^\d{4}$" required>
 
                 <button type="submit" id="submit-button">Complete Purchase</button>
             </form>
