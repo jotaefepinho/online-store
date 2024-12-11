@@ -134,7 +134,8 @@ router.delete('/', authenticate, async (req, res) => {
         for (let item of cart.items) {
             const product = await Product.findOne({ id: item.id });
             if (product) {
-                product.stock -= item.quantity;  // Decrement from stock
+                product.stock -= item.quantity;         // Decrement from stock
+                product.quantitySold += item.quantity;  // Increment to Quantity Sold
                 await product.save();
             }
         }
