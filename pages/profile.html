@@ -25,6 +25,7 @@
             <ul>
                 <li><a href="../pages/index.html">Home</a></li>
                 <li><a href="../pages/catalog.html">Products</a></li>
+                <li><a href="../pages/admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
@@ -37,8 +38,8 @@
                     <div class="form-group">
                         <h3>Personal Information</h3>
                         <div class="form-row">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-row">
                             <label for="email">Email</label>
@@ -83,6 +84,7 @@
                     <!-- Profile information will be displayed here -->
                 </div>
             </div>
+            <button onclick="logout()">Logout</button>
             <div class="form-actions">
                 <button type="button" id="delete-account" class="delete-button">Delete Account</button>
             </div>
@@ -92,6 +94,8 @@
     <footer>
         <p>&copy; 2024 USP 33+&frac13;</p>
     </footer>
-    <script src="../scripts/edit-profile.js"></script>
+    <script src="../scripts/profile.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/header.js"></script>
 </body>
 </html>
