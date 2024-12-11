@@ -1,100 +1,179 @@
-// Obtenha produtos e o carrinho armazenado no localStorage ou inicialize um carrinho padrão
-const products = JSON.parse(localStorage.getItem('products')) || [];
-let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+// Pull cart from server
+async function fetchCart() {
+    const token = localStorage.getItem('authToken');
 
+    if (token) {
+        try {
+            // Get items in user cart
+            const cartResponse = await fetch('http://localhost:3000/cart', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
 
-// Elemento do carrinho no DOM
-const shoppingCart = document.getElementById('shopping-cart');
+            if (!cartResponse.ok) {
+                throw new Error('Error while searching user cart.');
+            }
 
-// Função para atualizar o total do carrinho
-function updateCart() {
-    let total = 0;
+            const cartItems = await cartResponse.json();
 
-    cartItems.forEach(item => {
-        const product = products.find(p => p.id === item.id);
-        if (product) {
-            const itemTotal = product.price * item.quantity;
-            total += itemTotal;
+            // Get each product's details
+            const productDetailsPromises = cartItems.map(async (item) => {
+                const productResponse = await fetch(`http://localhost:3000/products/${item.id}`);
+                if (!productResponse.ok) {
+                    throw new Error(`Error while searching data for product with ID ${item.id}`);
+                }
+                const productDetails = await productResponse.json();
+                return {
+                    id: item.id,
+                    quantity: item.quantity,
+                    productDetails: {
+                        title: productDetails.title || 'No title available',
+                        price: productDetails.price || 0,
+                        image: productDetails.image || '/images/default-image.jpg',
+                        artist: productDetails.artist || 'Unknown Artist',
+                        stock: productDetails.stock || 0,
+                    },
+                };
+            });
+
+            // Wait for all promises
+            const detailedCartItems = await Promise.all(productDetailsPromises);
+            return detailedCartItems;
+        } catch (error) {
+            console.error('Error while searching cart:', error);
+            return [];
         }
-    });
-
-    // Atualiza o total exibido no carrinho
-    const totalElement = document.getElementById('total');
-    if (totalElement) {
-        totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    } else {
+        console.error('No token provided.');
+        return [];
     }
 }
 
-// Função para renderizar os produtos no carrinho
-function renderCart() {
-    shoppingCart.innerHTML = ''; // Limpa o conteúdo anterior
+
+// Render cart on DOM
+async function renderCart() {
+    const shoppingCart = document.getElementById('shopping-cart');
+    shoppingCart.innerHTML = '';
+
+    const cartItems = await fetchCart();
+
+    if (cartItems.length === 0) {
+        shoppingCart.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+    }
+
     let totalCartValue = 0;
 
     cartItems.forEach(item => {
-        const product = products.find(p => p.id === item.id);
-        if (product) {
-            const productTotal = product.price * item.quantity;
-            totalCartValue += productTotal;
+        const { id, quantity, productDetails } = item;
+        const { title, price, image, artist, stock } = productDetails;
+        const productTotal = price * quantity;
+        totalCartValue += productTotal;
 
-            const cartProduct = document.createElement('div');
-            cartProduct.className = 'cart-product';
-            cartProduct.innerHTML = `
-                <div class="cart-product-img">
-                    <img src="${product.image}" alt="${product.title}">
+        const cartProduct = document.createElement('div');
+        cartProduct.className = 'cart-product';
+        cartProduct.innerHTML = `
+            <div class="cart-product-img">
+                <img src="${image}" alt="${title}">
+            </div>
+            <div class="cart-product-info">
+                <div class="cart-product-details name">${title}</div>
+                <div class="cart-product-details artist">${artist}</div>
+                <div class="cart-product-details price">Preço: $${price.toFixed(2)}</div>
+                <div class="cart-product-details count">
+                    <input type="number" value="${quantity}" min="1" max="${stock}" id="quantity-${id}" class="quantity-input">
                 </div>
-                <div class="cart-product-info">
-                    <div class="cart-product-details name">${product.title}</div>
-                    <div class="cart-product-details price">$${product.price.toFixed(2)}</div>
-                    <div class="cart-product-details count">
-                        <input type="number" value="${item.quantity}" min="1" id="quantity-${item.id}" class="quantity-input">
-                    </div>
-                    <div class="cart-product-details total">$${productTotal.toFixed(2)}</div>
-                    <div class="cart-product-details icon trash">
-                        <i class="fas fa-trash" onclick="removeFromCart(${item.id})"></i>
-                    </div>
+                <div class="cart-product-details total">Subtotal: $${productTotal.toFixed(2)}</div>
+                <div class="cart-product-details icon trash">
+                    <i class="fas fa-trash" onclick="handleRemoveFromCart('${id}')"></i>
                 </div>
-            `;
-            shoppingCart.appendChild(cartProduct);
+            </div>
+        `;
+        shoppingCart.appendChild(cartProduct);
 
-            // Evento para atualizar a quantidade automaticamente
-            const quantityInput = cartProduct.querySelector(`#quantity-${item.id}`);
-            quantityInput.addEventListener('change', () => updateQuantity(item.id));
-        }
+        // Update quantity automatically
+        const quantityInput = cartProduct.querySelector(`#quantity-${id}`);
+        quantityInput.addEventListener('change', () => handleQuantityChange(id, quantityInput.value));
     });
 
-    // Exibe o total do carrinho
+    // Show total price on cart
     const totalDisplay = document.createElement('div');
     totalDisplay.className = 'cart-total';
     totalDisplay.innerHTML = `<h3>Total: $${totalCartValue.toFixed(2)}</h3>`;
     shoppingCart.appendChild(totalDisplay);
-
-    // Atualiza o total no carrinho e no localStorage
-    updateCart();
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
-// Função para atualizar a quantidade de um produto
-function updateQuantity(id) {
-    const input = document.getElementById(`quantity-${id}`);
-    const newQuantity = parseInt(input.value);
-
+async function handleQuantityChange(id, newQuantity) {
+    newQuantity = parseInt(newQuantity, 10);
+    console.log(newQuantity);
     if (newQuantity > 0) {
-        const item = cartItems.find(item => item.id === id);
-        if (item) {
-            item.quantity = newQuantity;
+        try {
+            const token = localStorage.getItem('authToken');
+            if (!token) {
+                console.error('No token given.');
+                return;
+            }
+
+            const response = await fetch(`http://localhost:3000/cart/`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: id, quantity: newQuantity })
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                console.error('Error while updating quantity:', error.message);
+                return;
+            }
+
+            // Re-render cart with new quantity
+            renderCart();
+        } catch (error) {
+            console.error('Error while updating quantity on cart:', error);
         }
-        renderCart();
     } else {
-        removeFromCart(id);
+        // Remove item if quantity is less than 0
+        handleRemoveFromCart(id);
     }
 }
 
-// Função para remover um item do carrinho
-function removeFromCart(id) {
-    cartItems = cartItems.filter(item => item.id !== id);
-    renderCart();
+async function removeCartItem(id) {
+    const token = localStorage.getItem('authToken');
+    try {
+        const response = await fetch(`/cart/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.message || 'Error while removing from cart');
+        }
+
+        console.log(`Item with ID ${id} removed successfully.`);
+    } catch (error) {
+        console.error('Error while removing item from cart:', error);
+        alert(`Not possible to remove item: ${error.message}`);
+    }
 }
 
-// Inicializa o carrinho ao carregar a página
-renderCart();
-console.log(cartItems);
+// Deal with deletion from cart
+async function handleRemoveFromCart(id) {
+    await removeCartItem(id);
+    renderCart();
+}
+document.getElementById('checkout-btn').addEventListener('click', () => {
+    window.location.href = '../pages/payment.html'; // Redirect to payment
+});
+
+// Initialize cart render upon page load
+document.addEventListener('DOMContentLoaded', renderCart);
