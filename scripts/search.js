@@ -1,6 +1,6 @@
 const productGrid = document.getElementById('product-grid');
 const searchInput = document.getElementById('search-input');
-const productsPerPage = 16; // Change this number to show more or fewer products
+const productsPerPage = 15; // Change this number to show more or fewer products
 let currentPage = 1;
 
 function displayProducts() {
