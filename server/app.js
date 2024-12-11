@@ -1,24 +1,37 @@
+//app.js
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const app = express();
+const dotenv = require('dotenv');
 
-// Middleware
+const { router: authRoutes, authenticate } = require('./routes/auth'); // Importing authentication middleware
+
+const productRoutes = require('./routes/products'); // Importing product routes
+const cartRoutes = require('./routes/cart');        // Importing cart routes
+const paymentRoutes = require('./routes/payment');  // Importing payment routes
+const profileRoutes = require('./routes/profile');  // Importing profile routes
+
+const app = express();
+dotenv.config();
+
+// Middlewares
+app.use(express.json()); // Json interpreter
+app.use('/auth', authRoutes);         // authentication routes
+app.use('/products', productRoutes);  // product routes
+app.use('/cart', cartRoutes);         // cart routes
+app.use('/payment', paymentRoutes);   // payment routes
+app.use('/profile', profileRoutes);   // profile routes
+
 app.use(bodyParser.json());
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/onlineStore')
-  .then(() => {
-    console.log('Connected to MongoDB successfully');
-  })
-  .catch((err) => {
-    console.error('Error connecting to MongoDB:', err.message);
-  });
-
 // Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/products', require('./routes/products'));
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/payment', paymentRoutes);
+app.use('/api/profile', profileRoutes);
+
 
 app.use('/pages', express.static(path.join(__dirname, '../pages')));
 app.use('/styles', express.static(path.join(__dirname, '../styles')));
