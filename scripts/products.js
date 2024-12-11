@@ -31,6 +31,7 @@ const products = [
         genre:  ["progressive rock", "rock", "classic rock"],
         artist: 'Pink Floyd',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 3,
@@ -47,6 +48,7 @@ const products = [
         genre: ["rock", "classic rock"],
         artist: 'Elvis Presley',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 4,
@@ -63,6 +65,7 @@ const products = [
         genre: ["soundtrack", "pop"],
         artist: 'Various',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 5,
@@ -79,6 +82,7 @@ const products = [
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 6,
@@ -95,6 +99,7 @@ const products = [
         genre: ["alt rock", "pop", "alternative"],
         artist: 'Tally Hall',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 7,
@@ -111,6 +116,7 @@ const products = [
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 8,
@@ -127,6 +133,7 @@ const products = [
         genre: ["pop, dance"],
         artist: 'Michael Jackson',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 9,
@@ -143,6 +150,7 @@ const products = [
         genre: ['classic rock', 'rock'],
         artist: 'The Beatles',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 10,
@@ -159,6 +167,7 @@ const products = [
         genre: ['rock', 'pop rock', 'psychedelic pop', 'progressive pop'],
         artist: 'The Beatles',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 11,
@@ -175,6 +184,7 @@ const products = [
         genre: ['classic rock', 'psychedelic', 'rock'],
         artist: 'The Beatles',
         stock: 10,
+        quantitySold: 0,
     },
     {
         id: 12,
@@ -190,7 +200,8 @@ const products = [
         sampleUrl: "",
         genre: ['rock', 'classic rock', 'psychedelic'],
         artist: 'The Beatles',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 13,
@@ -206,7 +217,8 @@ const products = [
         sampleUrl: "",
         genre: ['electronic', 'big beat', 'techno'],
         artist: 'The Prodigy',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 14,
@@ -222,7 +234,8 @@ const products = [
         sampleUrl: "",
         genre: ['electronic', 'big beat', 'techno'],
         artist: 'The Prodigy',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 15,
@@ -238,14 +251,15 @@ const products = [
         sampleUrl: "",
         genre: ['pop', 'rock', 'pop rock', 'pop punk'],
         artist: 'Olivia Rodrigo',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 16,
         title: "GUTS (Deluxe)",
         price: 27.99,
         image: "https://lastfm.freetls.fastly.net/i/u/300x300/5ee4030c238234514efd1495153633b1.jpg",
-        description: "No description available..",
+        description: "Guts (stylized in all caps) is the second studio album by American singer-songwriter Olivia Rodrigo, released on September 8, 2023, through Geffen Records. Inspired by the period of time immediately following Sour's success, Rodrigo conceived Guts hoping to reflect the process of maturity she experienced toward the end of her teenage years.",
         tracklist: {
             sideA: ['all-american bitch', 'bad idea right?', 'vampire', 'lacy', 'ballad of a homeschooled girl', 'making the bed', 'logical', 'get him back!'],
             sideB: ['love is embarrassing', 'the grudge', "pretty isn't pretty", 'teenage dream', 'obsessed', 'scared of my guitar', 'stranger', "girl i've always been"]
@@ -254,6 +268,8 @@ const products = [
         sampleUrl: "",
         genre: ['indie rock', 'pop punk'],
         artist: 'Olivia Rodrigo',
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 17,
@@ -269,7 +285,8 @@ const products = [
         sampleUrl: "",
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 19,
@@ -285,7 +302,8 @@ const products = [
         sampleUrl: "",
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },{
         id: 20,
         title: "ye",
@@ -300,7 +318,8 @@ const products = [
         sampleUrl: "",
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     }
     ,{
         id: 21,
@@ -316,7 +335,8 @@ const products = [
         sampleUrl: "",
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 22,
@@ -332,7 +352,8 @@ const products = [
         sampleUrl: "",
         genre: ['rap','hip-hop'],
         artist: 'Kanye West',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 23,
@@ -348,7 +369,8 @@ const products = [
         sampleUrl: "",
         genre: ['pop', 'disco', 'dance-pop', 'nu-disco', 'synthpop'],
         artist: 'Dua Lipa',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },    
     {
         id: 24,
@@ -364,7 +386,8 @@ const products = [
         sampleUrl: "",
         genre: ['pop', 'dance', 'electropop', 'synthpop', 'dance-pop'],
         artist: 'Dua Lipa',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 25,
@@ -380,7 +403,8 @@ const products = [
         sampleUrl: "",
         genre: ['soul', 'pop'],
         artist: 'Adele',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 26,
@@ -396,7 +420,8 @@ const products = [
         sampleUrl: "",
         genre: ['soul', 'pop'],
         artist: 'Adele',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 27,
@@ -412,7 +437,8 @@ const products = [
         sampleUrl: "",
         genre: ['soul', 'pop'],
         artist: 'Adele',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 28,
@@ -428,7 +454,8 @@ const products = [
         sampleUrl: "",
         genre: ['soul', 'pop'],
         artist: 'Adele',
-        stock: 10,
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 29,
@@ -444,6 +471,8 @@ const products = [
         sampleUrl: "",
         genre: ['pop', 'indie pop', 'folk', 'rnb'],
         artist: 'Sabrina Carpenter',
+        stock: 12,
+        quantitySold: 0,
     },
     {
         id: 30,
@@ -459,9 +488,11 @@ const products = [
         sampleUrl: "",
         artist: 'Sabrina Carpenter',
         genre: ['pop', 'aoty', 'country', 'synthpop'],
+        stock: 12,
+        quantitySold: 0,
     }
     
 
 ];
 
-localStorage.setItem('products', JSON.stringify(products));
+module.exports = products;

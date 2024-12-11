@@ -59,40 +59,57 @@
                 <span class="close">&times;</span>
                 <h3 id="modal-title">Add Product</h3>
                 <form id="product-form" class="product-form">
+                    <!-- Artist Field -->
+                    <label for="artist">Artist:</label>
+                    <input type="text" id="artist" name="artist" required>
+
                     <!-- Title Field -->
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title" required>
-        
+
                     <!-- Price Field -->
                     <label for="price">Price:</label>
                     <input type="number" id="price" name="price" required step="0.01">
-        
+
                     <!-- Image Field -->
                     <label for="image">Image URL:</label>
                     <input type="text" id="image" name="image">
-        
+
                     <!-- Description Field -->
                     <label for="description">Description:</label>
                     <textarea id="description" name="description"></textarea>
-        
+
                     <!-- Tracklist Side A -->
                     <label for="sideA">Tracklist Side A:</label>
                     <textarea id="sideA" name="sideA" required></textarea>
-        
+
                     <!-- Tracklist Side B -->
                     <label for="sideB">Tracklist Side B:</label>
                     <textarea id="sideB" name="sideB" required></textarea>
-        
+
                     <!-- Singles -->
                     <label for="singles">Singles:</label>
                     <input type="text" id="singles" name="singles">
-                    
+
                     <!-- Sample -->
                     <label for="sample">Sample URL:</label>
                     <input type="text" id="sample" name="sample">
-        
+
+                    <!-- Genre -->
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" name="genre" required>
+
+                    <!-- Stock -->
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" name="stock" required>
+
+                    <!-- Quantity Sold -->
+                    <label for="quantitySold">Quantity Sold:</label>
+                    <input type="number" id="quantitySold" name="quantitySold" required>
+
                     <!-- Save Button -->
                     <button type="submit" id="save-product-btn">Save</button>
+
                 </form>
             </div>
         </div>
@@ -104,5 +121,6 @@
 
     <script src="../scripts/products.js"></script>
     <script src="../scripts/product-management.js"></script>
+    <script src="../scripts/header.js"></script>
 </body>
 </html>

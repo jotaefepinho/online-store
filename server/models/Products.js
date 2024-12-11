@@ -18,4 +18,12 @@ const productSchema = new mongoose.Schema({
   quantitySold: { type: Number, required: true }
 });
 
+// Guaranteeing numeric and unique ID
+productSchema.pre('save', function(next) {
+  if (isNaN(this.id)) {
+    return next(new Error('ID should be a number'));
+  }
+  next();
+});
+
 module.exports = mongoose.model('Product', productSchema);
