@@ -18,7 +18,7 @@ const users = [
     {
         name: 'Arturo Borges',
         email: 'arturo@icmc.usp.br',
-        password: 'password123',
+        password: 'password',
         role: 'admin',
         phone: "",
         address: "",
@@ -30,7 +30,7 @@ const users = [
     {
         name: 'José',
         email: 'jose@gmail.com',
-        password: 'password123',
+        password: 'jose123',
         role: 'viewer',
         phone: "",
         address: "",

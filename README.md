@@ -127,20 +127,24 @@ These Postman tests made it easier to debug the project.
 
 ## Build Procedures
 To run this project locally:
-1. **Install a Code Editor**: [VS Code](https://code.visualstudio.com/), or any text editor of your choice.
-2. **Clone the Project**: 
+1. **Clone the Project and go to the directory**: 
+   
    ```bash
    git clone [repository link]
-3. **Install all dependencies**
+   cd online-store
+2. **Install all dependencies**
+   
    ```bash
    npm install
-4. **Generate JWT Token**
+3. **Generate JWT Token**
+   
    ```bash
    node generatePrivateKey.js
    ```
    Paste the token onto .env, in JWT_SECRET
    
-5. **Start the Mongo Server**
+4. **Start the Mongo Server**
+   
    On one terminal window, paste the following commands:
    ```bash
    mkdir data/db
@@ -148,20 +152,31 @@ To run this project locally:
    ```
    This will create the database and start it up.
 
-6. **Import data to the database**
+5. **Import data to the database**
+   
    On a new terminal, do the following commands:
    ```bash
    node scripts/users.js
    node server/importProducts.js
    ```
-7. **Start the Web Server**
+6. **Start the Web Server**
+   
    On the same terminal as the imports, do:
    ```bash
    node server/server.js
    ```
-8. **Access the website on your browser:**
+7. **Access the website on your browser:**
+   
    [localhost:3000](localhost:3000)
 
+8.  **Create an account or use the standard accounts to test**
+   
+   |email|password|role
+   |-----|--------|----
+   |jota@usp33.br|password123|admin
+   |arturo@icmc.com.br|password|admin
+   |jose@gmail.com|jose123|viewer
+   
 
 ## Comments
    This project was developed for the Introduction to Web Design Course. Therefore, it is not a professional project nor a perfect website.
