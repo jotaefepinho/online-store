@@ -34,6 +34,7 @@ function displayProduct(product) {
     document.getElementById('album-price').textContent = product.price;
     document.getElementById('album-description').textContent = product.description;
     document.getElementById('album-cover').src = product.image;
+    document.getElementById('album-sample').src = product.sampleUrl;
 
     // Display Genre
     const genreContainer = document.getElementById('album-genre');

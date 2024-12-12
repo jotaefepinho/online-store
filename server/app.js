@@ -37,6 +37,7 @@ app.use('/pages', express.static(path.join(__dirname, '../pages')));
 app.use('/styles', express.static(path.join(__dirname, '../styles')));
 app.use('/scripts', express.static(path.join(__dirname, '../scripts')));
 app.use('/images', express.static(path.join(__dirname, '../images')));
+app.use('/samples', express.static(path.join(__dirname, '../samples')));
 
 // Redirect to index.html for the root URL
 app.get('/', (req, res) => {

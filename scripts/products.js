@@ -163,7 +163,7 @@ const products = [
             sideB: ['You Never Give Me Your Money', 'Sun King', 'Mean Mr. Mustard', 'Polythene Pam', 'She Came in Through the Bathroom Window', 'Golden Slumbers', 'Carry That Weight', 'The End', 'Her Majesty']
         },
         singles: [],
-        sampleUrl: "",
+        sampleUrl: "../samples/abbeyroad.ogg",
         genre: ['rock', 'pop rock', 'psychedelic pop', 'progressive pop'],
         artist: 'The Beatles',
         stock: 10,
@@ -180,7 +180,7 @@ const products = [
             sideB: ['Being For The Benefit Of Mr. Kite!', 'Within You Without You', "When I'm Sixty-Four", 'Lovely Rita', 'Good Morning Good Morning', "Sgt. Pepper's Lonely Hearts Club Band", 'A Day in the Life']
         },
         singles: [],
-        sampleUrl: "",
+        sampleUrl: "../samples/sgtpeppers.ogg",
         genre: ['classic rock', 'psychedelic', 'rock'],
         artist: 'The Beatles',
         stock: 10,

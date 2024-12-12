@@ -17,6 +17,7 @@ async function importProducts() {
             image: product.image,
             genre: product.genre,
             tracklist: product.tracklist,
+            sampleUrl: product.sampleUrl,
             singles: product.singles,
             stock: product.stock,
             quantitySold: product.quantitySold,
