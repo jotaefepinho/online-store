@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const addUserBtn = document.getElementById('add-user-btn');
     const userModal = document.getElementById('user-modal');
     const closeModal = document.querySelector('.close');
     const userForm = document.getElementById('user-form');
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let editingUserId = null;
     const token = localStorage.getItem('authToken'); // Get token
 
-    if (!addUserBtn || !userModal || !closeModal || !userForm || !userList || !modalTitle || !saveUserBtn) {
+    if (!userModal || !closeModal || !userForm || !userList || !modalTitle || !saveUserBtn) {
         console.error('Some elements were not found on DOM.');
         return;
     }
