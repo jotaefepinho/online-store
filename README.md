@@ -9,7 +9,7 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
 
 ---
 # TODO:
-   - Extra Feature!!!
+   - Comment all relevant css blocks
 
 
 ## Requirements
@@ -26,6 +26,7 @@ The project will include:
 
 **Additional requirements** we might be able to implement:
 - Product search and filter functionality. &check;
+- Sample playing on product page. &check;
 
 ---
 
