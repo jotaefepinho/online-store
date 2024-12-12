@@ -64,7 +64,7 @@ router.put('/', authenticate, async (req, res) => {
 // Delete user profile
 router.delete('/', authenticate, async (req, res) => {
     try {
-        const deletedProfile = await User.findOneAndDelete({ userId: req.user._id });
+        const deletedProfile = await User.deleteOne({"_id": req.user._id});
         if (!deletedProfile) {
             return res.status(404).json({ message: 'Profile not found' });
         }
