@@ -78,23 +78,51 @@ The project will include:
 ---
 
 ## Test Plan
-At this stage, manual testing will be conducted to ensure:
+At the first stage, manual testing will be conducted to ensure:
 - Proper navigation between the homepage, products, and other sections.
 - Product grid layout adjusts correctly for different screen sizes (desktop, tablet, mobile).
 - Buttons like "Shop Now" and the form submit work as expected.
 
-**Future Testing**:
-- **Log in**: Test different permissions for admins and users
+Final stage automated testing through Postman:
+- **Log in/Sign up**: Test different permissions for admins and users
 - **Shopping Cart and buying procedure**: Test if the shopping cart updates correctly
-- **TBD**: Not yet determined
+- **Adding/Editing Products,Users**: Test if it's possible do add/edit both products and users.
 ---
 
 ## Test Results
-Initial manual tests will show:
+Initial manual tests showed:
 - Navigation works smoothly between all sections.
 - Product grid displays correctly on desktop and mobile views.
-- Buttons and form fields are functional but not yet connected to a back-end.
+- Buttons and form fields are functional.
 - Pages work with simple implementations of their uses.
+
+Final Tests showed:
+- Database works correctly for all users
+- All pages connect correctly to backend
+- All functions are fully functional
+
+Note that the initial tests were made simply with a web-browser, but final tests mixed browser tests with Postman tests through HTTP requests.
+
+This made it simpler to get straight to the point responses. For example, listing all products or all users. For some part, we were testing wheter these data points were correctly loaded to their pages, but sometimes, the HTTP requests weren't even getting the correct responses:
+
+```js
+GET localhost:3000/auth/users
+
+Correct Response:
+{
+   {
+      "name": {"first user's name"},
+      ...
+   },
+   ...
+}
+
+Incorrect Response:
+   Unable to GET /auth/users
+```
+
+These Postman tests made it easier to debug the project.
+
 ---
 
 ## Build Procedures
@@ -134,6 +162,8 @@ To run this project locally:
 8. **Access the website on your browser:**
    [localhost:3000](localhost:3000)
 
-## Problems
 
 ## Comments
+   This project was developed for the Introduction to Web Design Course. Therefore, it is not a professional project nor a perfect website.
+
+   Additionally, we highlight, on our journey, the steep learning curve between HTML/CSS/js and frameworks/databases.
