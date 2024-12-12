@@ -156,5 +156,7 @@
     .album-info{
         flex-direction: column;
     }
-
+    .add-to-cart, .go-to-cart{
+        width: 100px;
+    }
 }

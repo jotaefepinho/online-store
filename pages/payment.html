@@ -62,13 +62,13 @@
             <form id="payment-form">
                 <h3>Payment Information</h3>
                 <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" pattern="^\d{16}$" required>
-                
+                <input type="text" id="card-number" name="card-number" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
                 <label for="expiration-date">Expiration Date:</label>
-                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY">
-                
-                <label for="pin">PIN:</label>
-                <input type="password" id="pin" name="pin" pattern="^\d{4}$" required>
+                <input type="text" id="expiration-date" name="expiration-date" maxlength="5" placeholder="MM/YY" required>
+
+                <label for="security-code">Security Code:</label>
+                <input type="text" id="security-code" name="security-code" maxlength="3" placeholder="" required>
 
                 <button type="submit" id="submit-button">Complete Purchase</button>
             </form>

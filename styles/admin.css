@@ -57,3 +57,14 @@
     font-size: 14px;
     color: var(--admin-dark-gray);
 }
+
+/* Media queries */
+@media (max-width: 800px) {
+    .admin-links{
+        flex-direction: column;
+    }
+    .admin-dashboard{
+        padding: 25px;
+        max-width: 90%;
+    }
+}

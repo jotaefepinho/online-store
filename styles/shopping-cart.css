@@ -16,6 +16,16 @@
     text-align: center;
     margin-bottom: 30px;
 }
+#checkout-btn{
+    width: 10%;
+    padding: 10px;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
 
 .cart-product {
     display: flex;
@@ -105,7 +115,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: 0 auto;
-    max-width: 600px;
     margin-top: 20px;
     text-align: center;
 }
@@ -199,6 +208,9 @@ input[type="text"] {
     .submit-button {
         padding: 10px 15px;
         font-size: 14px;
+    }
+    #checkout-btn{
+        width: 100px;
     }
 
 }
