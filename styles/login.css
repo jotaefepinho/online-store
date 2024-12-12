@@ -36,7 +36,8 @@
 
 .login form input {
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 10px;
+    font-size: 15px;
     border: 1px solid var(--white);
     border-radius: 5px;
     flex: 1;
