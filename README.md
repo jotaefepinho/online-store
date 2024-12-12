@@ -9,9 +9,6 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
 
 ---
 # TODO:
-   - Finalize Order Page
-   - Add images and covers "alt" description
-   - Style Admin pages differently
    - Extra Feature!!!
 
 
@@ -19,16 +16,16 @@ This is a simple **Online Store** project built with HTML, CSS, and basic JavaSc
 The project will include:
 - A homepage that displays a banner and product information. &check;
 - A products section with a grid layout, showcasing available vinyls. &check;
-- Persistent shopping cart using local storage.
-- User registration and authentication (login/logout), with two types of users: Admins and Clients.
-- Product/services records include, at least: name, id, photo, description, price, quantity (in stock), and quantity sold.
-- Selling Products: Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system).
-- Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+- Persistent shopping cart using local storage. &check;
+- User registration and authentication (login/logout), with two types of users: Admins and Clients. &check;
+- Product/services records include, at least: name, id, photo, description, price, quantity (in stock), and quantity sold. &check;
+- Selling Products: Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). &check;
+- Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity. &check;
 - Your functionality: Create a functionality that is specific to your application. &check;
 - Responsive design for various screen sizes (desktop, tablet, mobile). &check;
 
 **Additional requirements** we might be able to implement:
-- Product search and filter functionality.
+- Product search and filter functionality. &check;
 
 ---
 
@@ -106,7 +103,36 @@ To run this project locally:
 2. **Clone the Project**: 
    ```bash
    git clone [repository link]
-3. **Open Live Copy of Project on your Browser**: :D
+3. **Install all dependencies**
+   ```bash
+   npm install
+4. **Generate JWT Token**
+   ```bash
+   node generatePrivateKey.js
+   ```
+   Paste the token onto .env, in JWT_SECRET
+   
+5. **Start the Mongo Server**
+   On one terminal window, paste the following commands:
+   ```bash
+   mkdir data/db
+   mongod --dbpath data/db
+   ```
+   This will create the database and start it up.
+
+6. **Import data to the database**
+   On a new terminal, do the following commands:
+   ```bash
+   node scripts/users.js
+   node server/importProducts.js
+   ```
+7. **Start the Web Server**
+   On the same terminal as the imports, do:
+   ```bash
+   node server/server.js
+   ```
+8. **Access the website on your browser:**
+   [localhost:3000](localhost:3000)
 
 ## Problems
 
