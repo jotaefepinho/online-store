@@ -61,6 +61,7 @@ async function renderCart() {
     const cartItems = await fetchCart();
 
     if (cartItems.length === 0) {
+        document.getElementById("checkout-btn").style = "display: none";
         shoppingCart.innerHTML = '<p>Your cart is empty.</p>';
         return;
     }

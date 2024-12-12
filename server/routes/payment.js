@@ -5,16 +5,16 @@ const crypto = require('crypto');
 
 // Payment route
 router.post('/', authenticate, async (req, res) => {
-    const { address, cardNumber, expirationDate, pin } = req.body;
+    const { address, cardNumber, expirationDate, code } = req.body;
 
     try {
         // Simulating safe transactions with simple hash
         const hashedCardNumber = crypto.createHash('sha256').update(cardNumber).digest('hex');
-        const hashedPin = crypto.createHash('sha256').update(pin).digest('hex');
+        const hashedCode = crypto.createHash('sha256').update(code).digest('hex');
 
         console.log('Payment made successfully:');
         console.log('Card Number:', hashedCardNumber);
-        console.log('PIN:', hashedPin);
+        console.log('Code:', hashedCode);
 
 
         res.status(200).json({ success: true, message: 'Payment Successful!' });

@@ -34,6 +34,10 @@ function displayProduct(product) {
     document.getElementById('album-price').textContent = product.price;
     document.getElementById('album-description').textContent = product.description;
     document.getElementById('album-cover').src = product.image;
+
+    if(product.sampleUrl === ""){
+        document.getElementById('album-sample').style = "display: none";    
+    }
     document.getElementById('album-sample').src = product.sampleUrl;
 
     // Display Genre
