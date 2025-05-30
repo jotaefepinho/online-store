@@ -39,7 +39,7 @@ async function registerUser(name, email, password) {
         });
 
         const data = await response.json();
-
+        console.log(response);
         if (response.ok) {
             alert('Signup Successful! Now you can login.');
             // Redirect to login page

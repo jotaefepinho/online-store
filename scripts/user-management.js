@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         users.forEach(user => {
             const row = document.createElement('tr');
-            const isProtectedUser = ['admin'].includes(user.role);
+            const isProtectedUser = ['jota@usp33.br'].includes(user.email);
 
             row.innerHTML = `
                 <td>${user._id}</td>

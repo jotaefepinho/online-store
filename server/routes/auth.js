@@ -26,6 +26,7 @@ router.post('/signup', async (req, res) => {
             state: '',
             zip: '',
             country: '',
+            password: password,
         });
         await profile.save();
 
@@ -82,6 +83,7 @@ router.get('/users', async (req, res) => {
         res.status(500).json({ message: 'Error fetching users', error });
     }
 });
+
 // Route to get user data on id
 router.get('/users/:id', authenticate, async (req, res) => {
     const { id } = req.params;
