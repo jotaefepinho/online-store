@@ -60,7 +60,10 @@ The project will include:
 
 ### Extra Features
 - **None Planned**
-  
+
+### Project Images
+   [Gallery of Store Screenshots](git_images)
+
 ### Navigation Flow:
 
 ![Navigation Diagram](./diagram.png)
